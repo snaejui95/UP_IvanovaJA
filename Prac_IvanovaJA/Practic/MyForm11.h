@@ -11,7 +11,7 @@ using namespace std;
 
 namespace Practic {
 
-	/*Подсчёт количества цифр и помещения их в массив*/
+	/*Подсчёт количества цифр и помещение их в массив*/
 	static int* ch1 = new int[100];
 	static int kolNumber[10][10];
 
@@ -90,7 +90,7 @@ namespace Practic {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// label1
+			// Внешний вид на форме фрагмента label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(13, 13);
@@ -99,7 +99,7 @@ namespace Practic {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Изначальный массив:";
 			// 
-			// dataGridView1
+			// Внешний вид на форме фрагмента dataGridView1
 			// 
 			this->dataGridView1->AllowUserToResizeRows = false;
 			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
@@ -112,7 +112,7 @@ namespace Practic {
 			this->dataGridView1->Size = System::Drawing::Size(259, 48);
 			this->dataGridView1->TabIndex = 1;
 			// 
-			// label2
+			// Внешний вид на форме фрагмента label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(13, 118);
@@ -121,7 +121,7 @@ namespace Practic {
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Количество цифр:";
 			// 
-			// dataGridView2
+			// Внешний вид на форме фрагмента dataGridView2
 			// 
 			this->dataGridView2->AllowUserToResizeRows = false;
 			this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
@@ -133,7 +133,7 @@ namespace Practic {
 			this->dataGridView2->Size = System::Drawing::Size(119, 150);
 			this->dataGridView2->TabIndex = 3;
 			// 
-			// button1
+			// Внешний вид на форме фрагмента button1
 			// 
 			this->button1->Location = System::Drawing::Point(13, 85);
 			this->button1->Name = L"button1";
@@ -143,7 +143,7 @@ namespace Practic {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
-			// button2
+			// Внешний вид на форме фрагмента button2
 			// 
 			this->button2->Enabled = false;
 			this->button2->Location = System::Drawing::Point(12, 291);
@@ -154,7 +154,7 @@ namespace Practic {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm1::button2_Click);
 			// 
-			// label3
+			// Внешний вид на форме фрагмента label3
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(140, 135);
@@ -163,7 +163,7 @@ namespace Practic {
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"label3";
 			// 
-			// MyForm1
+			// Внешний вид на формы MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -226,6 +226,7 @@ namespace Practic {
 		}
 		swapToStars();
 	}
+		   /*Label3 появляется после нажатия на button2*/
 private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
 	label3->Text = "";
 }

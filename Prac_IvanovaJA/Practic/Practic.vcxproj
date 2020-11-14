@@ -89,7 +89,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Yla\Desktop\Prac_Jul-master\DLL_S\DLL_S;C:\Users\SKKG\Desktop\Practic-master %282%29\Practic-master\DLL_S\DLL_S;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Yla\Desktop\Prac_IvanovaJA\DLL_S\DLL_S;C:\Users\Yla\Desktop\Prac_Jul-master\DLL_S\DLL_S;C:\Users\SKKG\Desktop\Practic-master %282%29\Practic-master\DLL_S\DLL_S;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />

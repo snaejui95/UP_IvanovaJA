@@ -78,7 +78,7 @@ namespace Practic {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// label1
+			// Внешний вид на форме фрагмента label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(10, 216);
@@ -88,7 +88,7 @@ namespace Practic {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Иванова Юлия";
 			// 
-			// label2
+			// Внешний вид на форме фрагмента label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(11, 230);
@@ -98,7 +98,7 @@ namespace Practic {
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Дата и время запуска: ";
 			// 
-			// textBox1
+			// Внешний вид на форме фрагмента textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(66, 27);
 			this->textBox1->Name = L"textBox1";
@@ -106,7 +106,7 @@ namespace Practic {
 			this->textBox1->TabIndex = 2;
 			this->textBox1->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox1_KeyPress);
 			// 
-			// label3
+			// Внешний вид на форме фрагмента label3
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(64, 11);
@@ -115,7 +115,7 @@ namespace Practic {
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Фамилия";
 			// 
-			// label4
+			// Внешний вид на форме фрагмента label4
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(66, 54);
@@ -124,7 +124,7 @@ namespace Practic {
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"Имя";
 			// 
-			// textBox2
+			// Внешний вид на форме фрагмента textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(66, 71);
 			this->textBox2->Name = L"textBox2";
@@ -132,7 +132,7 @@ namespace Practic {
 			this->textBox2->TabIndex = 5;
 			this->textBox2->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox2_KeyPress);
 			// 
-			// label5
+			// Внешний вид на форме фрагмента label5
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(66, 104);
@@ -141,7 +141,7 @@ namespace Practic {
 			this->label5->TabIndex = 6;
 			this->label5->Text = L"Отчество";
 			// 
-			// textBox3
+			// Внешний вид на форме фрагмента textBox3
 			// 
 			this->textBox3->Location = System::Drawing::Point(66, 121);
 			this->textBox3->Name = L"textBox3";
@@ -149,7 +149,7 @@ namespace Practic {
 			this->textBox3->TabIndex = 7;
 			this->textBox3->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox3_KeyPress);
 			// 
-			// button1
+			// Внешний вид на форме фрагмента button1
 			// 
 			this->button1->Location = System::Drawing::Point(66, 158);
 			this->button1->Name = L"button1";
@@ -159,7 +159,7 @@ namespace Practic {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
-			// MyForm
+			// Внешний вид формы MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -184,7 +184,7 @@ namespace Practic {
 		}
 #pragma endregion
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	/*Вывод даты*/
+	/*Вывод даты и времени*/
 		struct tm* date;
 		char Current_date[100];
 		const time_t timer = time(NULL);
@@ -195,6 +195,7 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) 
 		//////////////////////
 		randText();
 	}
+	   /*Окно приветствия*/
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "") MessageBox::Show("Заполните все поля", "Ошибка",
 			MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -206,18 +207,21 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) 
 			form->ShowDialog();
 		}
 	}
+	   /*Запрет ввода любых символов кроме букв*/
 private: System::Void textBox1_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	if (Char::IsDigit (e->KeyChar)) e->Handled = true;
 	if (Char::IsPunctuation(e->KeyChar)) e->Handled = true;
 	if (Char::IsSymbol(e->KeyChar)) e->Handled = true;
 	if (Char::IsLetter(e->KeyChar)) return;
 }
+	   /*Запрет ввода любых символов кроме букв*/
 private: System::Void textBox2_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	if (Char::IsDigit(e->KeyChar)) e->Handled = true;
 	if (Char::IsPunctuation(e->KeyChar)) e->Handled = true;
 	if (Char::IsSymbol(e->KeyChar)) e->Handled = true;
 	if (Char::IsLetter(e->KeyChar)) return;
 }
+	   /*Запрет ввода любых символов кроме букв*/
 private: System::Void textBox3_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	if (Char::IsDigit(e->KeyChar)) e->Handled = true;
 	if (Char::IsPunctuation(e->KeyChar)) e->Handled = true;
